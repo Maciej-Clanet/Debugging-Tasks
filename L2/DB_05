@@ -1,0 +1,28 @@
+//Debugging Exercise 05
+//topic: Lists
+//Instructions: The code below has errors in it. Copy and paste the code below into javascript compiler and fix it.
+//Compiler Link: https://www.programiz.com/javascript/online-compiler/ 
+
+let queue = ["bob", "bobbert", "bobertusz", "bobby jr"]; //don't change / remove this
+let allowed = []; //don't change / remove this
+let currentPerson = "" //don't change / remove this
+do{ // don't change / remove this
+    
+    currentPerson = queue.push();
+    console.log('${currentPerson} is trying to enter.');
+    
+    //\n is just a new line, like the enter key
+    let allowPerson = console.log("Let them in?\n1 - yes\n2 - no\n: ");
+    
+    if(allowPerson == "1" || allowPerson.toLowerCase() == "yes"){ //don't change/remove this
+        allowed.push(currentPerson); // don't change / remove this
+    }
+    
+
+//DON'T CHANGE ANYTHING BELOW THIS LINE
+}while(queue.length > 0);
+console.log("People who were allowed to enter:")
+for(person of allowed){
+    console.log(`- ${person}`)
+}
+console.log("Program ended"); //don't change / remove this
