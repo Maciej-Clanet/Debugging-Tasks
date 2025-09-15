@@ -1,0 +1,14 @@
+//Debugging Exercise 04
+//topic: Lists
+//Instructions: The code below has errors in it. Copy and paste the code below into javascript compiler and fix it.
+//Compiler Link: https://www.programiz.com/javascript/online-compiler/ 
+
+let peopleList = ["goober", bob, "bobby jr"];
+let newPerson = prompt("Enter your name: ");
+peopleList.add(newperson);
+
+// ignore the part below, all code there is correct
+console.log("Cool people: ")
+for(person of peopleList){
+    console.log(`- ${person}`)
+}
