@@ -1,0 +1,13 @@
+//Debugging Exercise 07
+//topic: Functions
+//Instructions: The code below has errors in it. Copy and paste the code below into javascript compiler and fix it.
+//Compiler Link: https://www.programiz.com/javascript/online-compiler/ 
+
+function multiplyBy(num, multiplier){
+    return num * multiplier
+}
+
+let number = prompt("Enter a number ");
+let multiply = prompt("How much to muiltiply by? : ");
+
+console.log(`${number} * ${multiply} is ${multiplyBy()}`);
