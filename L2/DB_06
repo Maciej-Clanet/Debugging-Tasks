@@ -1,0 +1,23 @@
+//Debugging Exercise 06
+//topic: Functions
+//Instructions: The code below has errors in it. Copy and paste the code below into javascript compiler and fix it.
+//Compiler Link: https://www.programiz.com/javascript/online-compiler/ 
+
+Function printProjectInfo(){
+    console.log("Project name - My Website Server");
+    console.log("Creation date - 17/09/2025");
+    console.log("Author - Silly Goober");
+}
+function projectMenu(){
+    console.log("1.Start Server");
+    console.log("2.Server Settings");
+    console.log("3.Server Info");
+    console.log("4.Exit");
+    let choice = prompt("Enter choice: ");
+    return choice;
+}
+
+printProjectInfo();
+
+let userSelection = ProjectMenu();
+console.log("user selected option: " + choice)
