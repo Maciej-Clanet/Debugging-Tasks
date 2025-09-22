@@ -1,0 +1,106 @@
+let testList = ["goob", "bob", "bobbert"];
+
+console.log("\n while basic loop")
+let count = 0;
+while(count < testList.length){
+    console.log(" - " + testList[count]);
+    count++;
+}
+//pros: simple, condition could be anything
+//cons: we have to maintain our own index, needs to be defined outside of the loop (to avoid re-setting / redefining every loop)
+
+
+console.log("\n while with user choice, meh application");
+let displayMore = true;
+let count2 = 0;
+while(displayMore == true){
+    console.log(" - " + testList[count2])
+    count2++;
+    let choice = prompt("show more? y/n: ");
+    if(choice != "y"){
+        displayMore = false;
+    }
+    // displayMore = prompt("show more? y/n: ") == "y"; //fancy way to make this shorter
+}
+//once we set up display to false, the next loop will no longer run and the program will move on
+
+console.log("\n while, better use case:")
+while(prompt("Add a name? y/n: ") == "y"){
+    testList.push(prompt("Enter a name: "))
+}
+// the condition will evaluate to true or false, allowing us to keep enterin names untill the user decides to stop 
+
+console.log("\n do while")
+do{
+    testList.push(prompt("Enter a name: "))   
+}while(prompt("Add a name? y/n: ") == "y")
+//same as previous, but we will allways run the loop at least once
+//useful for required actions that could need to repeat, but might not need to
+
+console.log("\n standard for loop")
+for(let i=0; i < testList.length; i++){
+    // console.log(" - " + testList[i])
+    console.log(`${i + 1}. ${testList[i]}`)
+}
+// pros: control over index, ability to control the iterator (ex decide to do every 2 items etc)
+//cons: a bit verbose for simply processing a list
+
+console.log("\n for in loop")
+for(let nameIndex in testList){
+    console.log(`${nameIndex + 1}. ${testList[nameIndex]}`)
+    //for in loop actually uses string datatype for index, because its actually iterating over keys
+    // console.log(`${parseInt(nameIndex)+1}. ${testList[nameIndex]}`)
+}
+//loops over the keys of the processed item. Key will be string datatype. Can be used for indexes, but better application is on objects
+
+console.log("\n for in loop better use case");
+let person = {"name" : "Big goob", "surname" : "Smith"}
+for(let personkey in person){
+    console.log(`key ${personkey} has value ${person[personkey]}`)
+}
+
+
+console.log("\n for of loop")
+for(let name of testList){
+    console.log(" - " + name);
+}
+//for of loop will give us the values, but not the index. perfect when we dont need the index
+
+
+console.log("\n map, separate function way")
+function displayItem(item){
+    console.log(" - " + item);
+}
+testList.map(displayItem)
+//map will perform a function on each one of the items in a list
+
+console.log("\nmap, full function syntax")
+testList.map(function(name){
+    console.log(" - " + name);
+})
+//if we don't need a function for anything else, we can skip giving it a name by making it inside of the map
+//this is called an "annonymous function"
+
+console.log("\n map, full syntax shorthand");
+testList.map((name) => {
+    console.log(" - " + name)
+})
+// shorter way to write an annonyumous function, common in react
+
+console.log("\n map, but also get index")
+testList.map((name, index) => {
+    console.log(`${index}. ${name}`)
+})
+
+console.log("\n map, shortest possible syntax")
+testList.map(name => console.log(" - " + name))
+// if we don't need multiple lines of code, we can skip the brackets. I don't recommend this for beginners
+
+console.log("\n map, make a new processed list")
+let capitalisedList = testList.map((name) => {
+    return name.toUpperCase();
+})
+capitalisedList.map(name => console.log(" - " + name))
+//we can create a new list of values returned from a map. This is the main usecase of a map.
+//Very useful in react to generate html code from lists
+//ex generate list of HTML to display, from list of products
