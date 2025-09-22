@@ -1,0 +1,37 @@
+//The below is an working example of a small program. There are no errors.
+//There are a lot of ways to improve this program.
+//Some of the improvements require tools we have not covered yet
+//Some of the issues are due to how this program is designed
+
+/*TASK: 
+Make a list of all the possible problems you can think of with this program
+ -
+ 
+*/
+function avgThreeVals(num1, num2, num3){
+    let total = num1 + num2 + num3;
+    let average = total / 3;
+    return average
+}
+
+function getUserNumber(nrLabel){
+    let stringInput = prompt(`Enter number nr ${nrLabel}: `);
+    //convert to numeric data type
+    let number = Number(stringInput);
+    return number;
+}
+
+//Program starts here
+console.log("Welcome\n-------------------\n");
+
+//the for loop will make the code below repeat 3 times, adding 1 to var i on every loop
+let numbers = [];
+for(let i=0; i < 3; i = i + 1){ 
+    
+    let newNumber = getUserNumber(i + 1);
+    numbers.push(newNumber);
+    
+}
+
+let avg = avgThreeVals(numbers[0], numbers[1], numbers[2]);
+console.log("The average of these 3 numbers is " + avg);
