@@ -1,0 +1,33 @@
+//Debugging Exercise 10
+//topic: Loops, If Statements, Functions
+//Instructions: The code below has errors in it. Copy and paste the code below into javascript compiler and fix it.
+//Compiler Link: https://www.programiz.com/javascript/online-compiler/ 
+
+//GLOBAL VARIABLES
+let group_a = ("bob", "big goobowski", "batman");
+let group_b = ("Leonardo", "Donatello", "Raphael", "Michelangelo");
+let id_tracker = 0;
+
+function addIds(student_group){
+    for(let i = 0; i<student_group.length; i+=2){
+        id_tracker++;
+        let newId = id_tracker;
+        let formattedStudent = `${student_group[i]} - id: ${newId}`;
+        student_group[i] = formattedStudent;
+    }
+}
+
+function displayGroup(group_name student_group){
+    console.log(`students in ${group_name}`)
+    for(let student of student_group){
+        console.log(" - " + student);
+    }
+}
+
+console.log("Student Id Generator");
+addIds(group_a);
+addIds(group_b);
+
+displayGroup("A group",group_a);
+console.log(" "); //just adds a space between 2 lists
+displayGroup(group_b, "B group");
