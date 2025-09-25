@@ -1,0 +1,36 @@
+//Debugging Exercise 09
+//topic: Loops, If Statements, Functions
+//Instructions: The code below has errors in it. Copy and paste the code below into javascript compiler and fix it.
+//Compiler Link: https://www.programiz.com/javascript/online-compiler/ 
+
+yesOrNo(question){
+    console.log(question);
+    let choice = prompt("y/n: ");
+    
+    //if user entered 'y' return true, else return false
+    if(choice == "y"){
+        return true
+    } else {
+        false
+    }
+}
+
+function createPeopleList(){
+    let people_to_return = [];
+    let continue_adding = false; //
+    
+    while(continue_adding == true){
+        let newPerson = prompt("Enter a student name: ")    
+        people_to_return.push(newPerson);
+        
+        continue_adding = yesOrNo("Do you want to add another student?");
+    }
+    
+    return people_to_return;
+}
+
+//PROGRAM STARTS FROM HERE
+console.log("Student class builder - part 1");
+let people = createPeopleList[];
+console.log(people);
+console.log("Program end");
