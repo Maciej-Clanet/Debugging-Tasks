@@ -1,0 +1,27 @@
+/*
+START
+
+  FUNCTION authenticate(username, password) that takes username and password as parameters
+    IF username is NOT the same as "admin"
+      RETURN false
+    
+    IF password is not the same as "password"
+      RETURN false
+
+    RETURN true
+  END FUNCTION
+
+
+  INITIALIZE var allowed as false
+
+  WHILE allowed is false
+    INITIALIZE var username with INPUT from user
+    INITIALIZE var password with INPUT from user
+
+    SET allowed to CALL authenticate(username, password)
+  END WHILE
+
+  OUTPUT "welcome" 
+  OUTPUT "program end"
+END
+*/
