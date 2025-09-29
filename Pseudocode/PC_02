@@ -14,7 +14,7 @@ START
       OUTPUT "password is incorrect"
   ELSE
     OUTPUT "username is incorrect"
-  ELSE IF
+  END IF
 
   OUTPUT "program end"
 END
