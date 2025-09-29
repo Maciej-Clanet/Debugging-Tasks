@@ -1,0 +1,21 @@
+/*
+START
+
+  INITIALIZE variable username as "" (empty string)
+  INITIALIZE variable password as "" (empty string)
+
+  INPUT the username
+  INPUT the password
+
+  IF username is the same as "admin"
+    IF password is the same as "1234"
+      OUTPUT "welcome"
+    ELSE
+      OUTPUT "password is incorrect"
+  ELSE
+    OUTPUT "username is incorrect"
+  ELSE IF
+
+  OUTPUT "program end"
+END
+*/
